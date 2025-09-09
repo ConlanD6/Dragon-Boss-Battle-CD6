@@ -584,7 +584,7 @@ async function damageDragon(isSpell, element, manaCost, descText) {
 async function start() {
   toggleBackButton(0);
   // await textWrite('You enter a cave, a looming dragon stares back at you. ~Theres nowhere to run now.~~','mainText'); // Origional intro
-  // await intro()
+  await intro()
 
   mainLoop();
 }
