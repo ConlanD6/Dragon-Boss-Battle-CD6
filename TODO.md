@@ -1,0 +1,2 @@
+- <s>Add desc text to each button on hover.</s>
+- figure out how to put a landscape marker on thin screens

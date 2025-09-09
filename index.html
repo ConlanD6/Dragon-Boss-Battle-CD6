@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Battle</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="boss">
+      <div id="bossHealth" class="bar">
+        <div id="bossHealthLeft" class="meterLeft"></div>
+        <div id="bossMT" class="MT"></div>
+      </div>
+      <div id="bossHealthNum" class="meterNum">100%</div>
+    </div>
+    <div id="mainText" class="textBox"></div>
+    <div id="playerStats">
+      <div id="playerHealthBar" class="bar">
+        <div id="plrHealthLeft" class="meterLeft"></div>
+        <!--         <div id="plrHealthMT" class="MT"></div> -->
+      </div>
+      <div
+        id="plrHealthNum"
+        class="meterNum"
+        style="text-align: left; grid-column: 3"
+      >
+        100%
+      </div>
+      <div
+        id="plrManaNum"
+        class="meterNum"
+        style="text-align: right; grid-column: 4; height: 20px"
+      >
+        100 MP
+      </div>
+      <div id="playerManaBar" class="bar">
+        <div id="plrManaLeft" class="meterLeft"></div>
+        <!--         <div id="plrManaMT" class="MT"></div> -->
+      </div>
+    </div>
+
+    <div id="playerMenu" class="textBox" onmouseleave="flavorText('')">
+      <div
+        id="playerB1"
+        class="playerOption"
+        onclick="flavorText(document.getElementById('playerB1').innerHTML + 'Click');buttonPress(document.getElementById('playerB1').innerHTML);"
+        onmouseenter="flavorText(document.getElementById('playerB1').innerHTML)"
+      >
+        Fight
+      </div>
+      <div
+        id="playerB2"
+        class="playerOption"
+        onclick="flavorText(document.getElementById('playerB2').innerHTML + 'Click');buttonPress(document.getElementById('playerB2').innerHTML);"
+        onmouseenter="flavorText(document.getElementById('playerB2').innerHTML)"
+      >
+        Magic
+      </div>
+      <div
+        id="playerB3"
+        class="playerOption"
+        onclick="flavorText(document.getElementById('playerB3').innerHTML + 'Click');buttonPress(document.getElementById('playerB3').innerHTML);"
+        onmouseenter="flavorText(document.getElementById('playerB3').innerHTML)"
+      >
+        Defend
+      </div>
+      <div
+        id="playerB4"
+        class="playerOption"
+        onclick="buttonPress(document.getElementById('playerB4').innerHTML);"
+        onmouseenter="flavorText(document.getElementById('playerB4').innerHTML)"
+      ></div>
+    </div>
+    <div
+      id="backButton"
+      onclick="setMenu(['Fight!','Spell!','Defend!']);toggleBackButton(0);"
+    >
+      <-- Back
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
